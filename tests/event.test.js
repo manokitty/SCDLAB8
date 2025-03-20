@@ -7,9 +7,10 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  await mongoose.connection.close();
-  await server.close();
+  await mongoose.connection.close(); // Close MongoDB connection
+  await server.close(); // Close Express server
 });
+
 
 describe("Event API", () => {
   it("should create an event", async () => {
