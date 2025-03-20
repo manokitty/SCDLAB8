@@ -8,6 +8,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      MONGO_URI: ${{ secrets.MONGO_URI }}
+      TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
 
     steps:
       - name: Checkout Code
